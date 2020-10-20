@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './Input.module.css'
 
-export default function Input({ value, onChange, label, placeholder, type = 'text', id, name }) {
+export default function Input({ value, onChange, label, placeholder, type = 'text', id, name, ...rest }) {
     return <div className={classes.inputContainer}>
         {label && <label
             htmlFor={id}
@@ -19,6 +19,7 @@ export default function Input({ value, onChange, label, placeholder, type = 'tex
             onChange={onChange}
             placeholder={placeholder}
             className={classes.input}
+            {...rest}
         />
     </div>
 }
