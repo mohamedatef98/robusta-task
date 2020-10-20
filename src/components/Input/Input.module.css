@@ -20,3 +20,13 @@
   border: 2px solid #ddd;
   border-radius: 5px;
 }
+
+.error {
+  margin-top: 0.25rem;
+  color: #f94d9f;
+}
+
+.error:empty::after {
+  content: ".";
+  visibility: hidden;
+}
