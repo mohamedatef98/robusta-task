@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Input from '../Input/Input'
+import Button from '../Button/Button'
 
 export default function LoginForm({ onSubmit }) {
     const [email, setEmail] = useState('')
@@ -25,7 +26,9 @@ export default function LoginForm({ onSubmit }) {
             value={password}
             onChange={e => setPassword(e.target.value)}
         />
-        <input type="submit" value="submit" />
+        <Button type='submit'>
+            Login
+        </Button>
     </form>
 }
 

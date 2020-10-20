@@ -1,0 +1,10 @@
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(to left, #a74ab3, #f94d9f);
+  color: white;
+  border-radius: 5px;
+}
