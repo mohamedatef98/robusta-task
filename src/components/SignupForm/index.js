@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Input from '../Input/Input'
-import Button from '../Button/Button'
+import Input from '../Input'
+import Button from '../Button'
 
 export default function SignupForm({ onSubmit }) {
     const [fullName, setFullName] = useState('')
