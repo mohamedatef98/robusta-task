@@ -1,0 +1,30 @@
+.formContainer {
+  padding: 1.5rem;
+}
+
+.formHeader {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.formSelect {
+  display: flex;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.formSelect > * {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  background: none;
+}
+
+.formSelect .selected {
+  background: linear-gradient(to left, #a74ab3, #f94d9f);
+  border-radius: 5px;
+  color: white;
+}

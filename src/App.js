@@ -1,10 +1,10 @@
 import React from 'react'
-import { Input, LoginForm } from './components'
+import { AuthForm } from './components'
 
 function App() {
   return (
     <div>
-      <LoginForm />
+      <AuthForm />
     </div>
   )
 }
