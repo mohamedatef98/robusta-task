@@ -21,14 +21,14 @@ const validateLoginForm = ({ email, password }) => {
 export default function LoginForm({ onSubmit }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [formErrors, setFormErrors] = useState({})
 
     const handleFormSubmit = useCallback(
         (e) => {
             e.preventDefault()
             const validationResult = validateLoginForm({ email, password })
-            if (!validationResult.email.length && !validationResult.password.length)
-                onSubmit({ email, password })
-            else console.error(validationResult)
+            if (!validationResult.email.length && !validationResult.password.length) onSubmit({ email, password })
+            else setFormErrors(validationResult)
         },
         [onSubmit, email, password]
     )
@@ -42,6 +42,7 @@ export default function LoginForm({ onSubmit }) {
             name='email'
             value={email}
             onChange={e => setEmail(e.target.value)}
+            error={formErrors.email?.[0]}
         />
         <Input
             id='password'
@@ -51,6 +52,7 @@ export default function LoginForm({ onSubmit }) {
             name='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
+            error={formErrors.password?.[0]}
         />
         <Button type='submit'>
             Login
