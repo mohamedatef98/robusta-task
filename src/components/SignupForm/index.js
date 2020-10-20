@@ -38,7 +38,10 @@ export default function SignupForm({ onSubmit }) {
                 !validationResults.userName.length &&
                 !validationResults.email.length &&
                 !validationResults.password.length
-            ) onSubmit({ fullName, userName, email, password })
+            ) {
+                onSubmit({ fullName, userName, email, password })
+                setFormErrors({})
+            }
             else setFormErrors(validationResults)
         },
         [fullName, userName, email, password, onSubmit]

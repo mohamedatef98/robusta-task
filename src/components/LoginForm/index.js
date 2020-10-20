@@ -27,7 +27,10 @@ export default function LoginForm({ onSubmit }) {
         (e) => {
             e.preventDefault()
             const validationResult = validateLoginForm({ email, password })
-            if (!validationResult.email.length && !validationResult.password.length) onSubmit({ email, password })
+            if (!validationResult.email.length && !validationResult.password.length) {
+                onSubmit({ email, password })
+                setFormErrors({})
+            }
             else setFormErrors(validationResult)
         },
         [onSubmit, email, password]
