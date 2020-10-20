@@ -24,7 +24,7 @@
 }
 
 .formSelect .selected {
-  background: linear-gradient(to left, #a74ab3, #f94d9f);
+  background: linear-gradient(to right, #f94d9f, #a74ab3);
   border-radius: 5px;
   color: white;
 }

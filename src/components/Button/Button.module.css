@@ -4,7 +4,7 @@
   border: none;
   font-size: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(to left, #a74ab3, #f94d9f);
+  background: linear-gradient(to right, #f94d9f, #a74ab3);
   color: white;
   border-radius: 5px;
 }
