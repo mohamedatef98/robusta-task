@@ -8,6 +8,8 @@ import Button from '../Button'
 import GradientLink from '../GradientLink'
 import { INVALID_EMAIL_ERR, REQUIRED_FIELD_ERR, MIN_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH_ERR } from '../../constants'
 
+import classes from './LoginForm.module.css'
+
 const validateLoginForm = ({ email, password }) => {
     const validationErrors = { email: [], password: [] }
     if (email.trim() === '') validationErrors.email.push(REQUIRED_FIELD_ERR('Email'))
@@ -61,7 +63,7 @@ export default function LoginForm({ onSubmit, onSignup }) {
         <Button type='submit'>
             Login
         </Button>
-        <p>Not a member? <GradientLink onClick={onSignup}>Signup now!</GradientLink></p>
+        <p className={classes.signup}>Not a member? <GradientLink onClick={onSignup}>Signup now!</GradientLink></p>
 
     </form>
 }
