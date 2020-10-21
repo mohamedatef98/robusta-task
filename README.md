@@ -1,3 +1,43 @@
+# Robusta Technical Frontend Task
+
+## Overview
+
+Using this markup as a base, please fix the errors and improve the usability and polish of the sign-up form.
+
+This is meant to be a quick exercise, so please don't feel the need to spend more than a couple of hours of actual coding. Also, we are using native CSS and JS, but feel free to use any libraries you find necessary.
+
+> Note: Make sure to commit each feature/improvement you implement using `git`.
+
+## Task List
+
+You are not expected to perform all those tasks, and you are not limited to these only. You can do whatever you want that will improve the overall look and feel of the form.
+
+- Right now the page refreshes on submit, try to make the form submit the data using JavaScript (AJAX/XHR), maybe also add a loading indicator while the form submits in the background.
+- Give the form a makeover, you may take inspiration from any website you would like.
+- Validate the form before submitting (Client-Side Validation).
+- The form could be a little bit more accessible to screen readers.
+- Make the form allow both sign in and sign up, you can make it look like tabs and switch between them.
+
+## Considerations
+
+If you use any library/framework, you are expected to explain why you needed said libraries. So be mindful of the libraries you choose and always be responsible when applying them. For example you may use React/Vue/Angular but your task evaluation will vary based on the chosen framework.
+
+## Things you will need
+
+You would name to rename the file names from `.txt` to their appropriate extension, this is done to workaround security audits in google drive..
+
+The API endpoint is:
+
+https://private-b2e6827-robustatask.apiary-mock.com
+
+The documentation for the end points you need can be found here:
+
+https://robustatask.docs.apiary.io/#
+
+## Evaluation
+
+There is no fixed goals to check against, depending on the points you tackle and the enhancements you implement your evaluation will be varied from other candidates. However, **For bonus points, implement the solution without using a framework.**
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -11,58 +51,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
