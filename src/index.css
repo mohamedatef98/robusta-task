@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-family: sans-serif;
+  background: linear-gradient(to right, #f94d9f, #a74ab3);
 }
 
 * {
