@@ -10,7 +10,7 @@ import LoadingBar from '../LoadingBar'
 import classes from './AuthForm.module.css'
 
 
-export default function AuthForm({ className = '' }) {
+export default function AuthForm({ className = '', onSignup, onLogin, onError }) {
     const [showLoginForm, setShowLoginForm] = useState(true)
     const [loading, setLoading] = useState(false)
 
@@ -28,6 +28,8 @@ export default function AuthForm({ className = '' }) {
             setLoading(true)
             axios.post(`${api}/auth/login`, { ...f })
                 .then(r => setLoading(false))
+                .then(onLogin)
+                .catch(onError)
         }
         , []
     )
@@ -37,6 +39,8 @@ export default function AuthForm({ className = '' }) {
             setLoading(true)
             axios.post(`${api}/auth/register`, { ...f })
                 .then(r => setLoading(false))
+                .then(onSignup)
+                .catch(onError)
         }
         , []
     )
@@ -58,5 +62,8 @@ export default function AuthForm({ className = '' }) {
 }
 
 AuthForm.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    onSignup: PropTypes.func,
+    onLogin: PropTypes.func,
+    onError: PropTypes.func
 }
