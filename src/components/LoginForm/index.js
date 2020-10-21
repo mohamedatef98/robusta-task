@@ -60,7 +60,7 @@ export default function LoginForm({ onSubmit, onSignup }) {
             onChange={e => setPassword(e.target.value)}
             error={formErrors.password?.[0]}
         />
-        <Button type='submit'>
+        <Button type='submit' formNoValidate>
             Login
         </Button>
         <p className={classes.signup}>Not a member? <GradientLink onClick={onSignup}>Signup now!</GradientLink></p>
