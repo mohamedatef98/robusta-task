@@ -42,8 +42,8 @@ export default function AuthForm({ className = '' }) {
         </div>
 
         {showLoginForm ?
-            <LoginForm onSubmit={handleLoginSubmit} onSignup={handleSignupClick}/> :
-            <SignupForm onSubmit={handleSignupSubmit}/>
+            <LoginForm onSubmit={handleLoginSubmit} onSignup={handleSignupClick} /> :
+            <SignupForm onSubmit={handleSignupSubmit} onLogin={handleLoginClick} />
         }
     </div>
 }

@@ -4,6 +4,7 @@ import isEmail from 'validator/lib/isEmail'
 
 import Input from '../Input'
 import Button from '../Button'
+import GradientLink from '../GradientLink'
 import { INVALID_EMAIL_ERR, MIN_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH_ERR, REQUIRED_FIELD_ERR } from '../../constants'
 
 const validateSignupForm = ({ fullName, userName, email, password }) => {
@@ -22,7 +23,7 @@ const validateSignupForm = ({ fullName, userName, email, password }) => {
     return validationErrors
 }
 
-export default function SignupForm({ onSubmit }) {
+export default function SignupForm({ onSubmit, onLogin }) {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [userName, setUserName] = useState('')
@@ -91,9 +92,11 @@ export default function SignupForm({ onSubmit }) {
         <Button type='submit'>
             Signup
         </Button>
+        <p>Already a member? <GradientLink onClick={onLogin}>Login now!</GradientLink></p>
     </form>
 }
 
 SignupForm.propTypes = {
-    onSubmit: PropTypes.func
+    onSubmit: PropTypes.func,
+    onLogin: PropTypes.func
 }
