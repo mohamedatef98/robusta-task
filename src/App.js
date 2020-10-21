@@ -7,7 +7,7 @@ function App() {
     const [message, setMessage] = useState('')
 
     useEffect(() => {
-        document.title = 'Sign up | Robusta'
+        document.title = 'Login | Robusta'
     }, [])
 
     const clearMessage = useCallback(
