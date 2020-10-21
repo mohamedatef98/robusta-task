@@ -6,6 +6,7 @@ import { api } from '../../constants'
 
 import LoginForm from '../LoginForm'
 import SignupForm from '../SignupForm'
+import LoadingBar from '../LoadingBar'
 import classes from './AuthForm.module.css'
 
 
@@ -24,16 +25,17 @@ export default function AuthForm({ className = '' }) {
     const handleLoginSubmit = useCallback(
         (f) => axios.post(`${api}/auth/login`, { ...f })
             .then(console.log)
-        ,[]
+        , []
     )
 
     const handleSignupSubmit = useCallback(
         (f) => axios.post(`${api}/auth/register`, { ...f })
             .then(console.log)
-        ,[]
+        , []
     )
 
     return <div className={`${classes.formContainer} ${className}`}>
+        <LoadingBar loading />
         <h3 className={classes.formHeader}>{showLoginForm ? 'Login' : 'Signup'} Form</h3>
 
         <div className={classes.formSelect}>

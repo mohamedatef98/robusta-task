@@ -1,5 +1,8 @@
 .formContainer {
   padding: 1.5rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .formHeader {
